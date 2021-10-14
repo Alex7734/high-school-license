@@ -31,7 +31,7 @@ function Astar(startNode, endNode){
         var neighbours = current.neighbours;
         for (let i=0; i<neighbours.length; i++){
             let neighbour = neighbours[i];
-            if (!closedSet.includes(neighbour)){
+            if (!closedSet.includes(neighbour) && !neighbour.isWall){
                 let tempG = current.g + 1;
                 let newPath = false;
                 if (openSet.includes(neighbour)){
@@ -47,7 +47,7 @@ function Astar(startNode, endNode){
                 
                 if (newPath){
                     neighbour.f = heuristic(neighbour, endNode);
-                    neighbour.h = neighbour.h + neighbour.g;
+                    neighbour.h = neighbour.f + neighbour.g;
                     neighbour.prev = current;
                 }
 
@@ -59,7 +59,7 @@ function Astar(startNode, endNode){
 }
 
 function heuristic(a, b){
-    let d = Math.abs(a.x-a.y) + Math.abs(b.x - b.y)
+    let d = Math.abs(a.y-a.x) + Math.abs(b.y - b.x)
     return d
 }
 
