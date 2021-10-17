@@ -3,7 +3,7 @@
 Cu totii stim despre faimosul algoritm _Dijkstra_ care gaseste cea mai scurta distanta dintre doua puncte ale unui graf prin folosirea unei structuri de date abstracte si anume [,,Cozii de prioritati''](https://en.wikipedia.org/wiki/Priority_queue). Un videoclip care explica foarte bine acest algoritm este cel de la Computerphile, linkul este [aici](https://www.youtube.com/watch?v=GazC3A4OQTE). Ei bine acest proiect reuseste sa ilustreze intr-un mod interactiv _gasirea celui mai scurt drum intre 2 puncte ale unui grafic_ cu mentionaria faptului ca graficul nostru este o matrice de _12 linii cu coloane generate dinamic de utilizator (intre 5 si 30)_ fiind prezente si noduri la care nu avem access sub forma unor _ziduri_. _Nodurile sunt elemente ale matricii_, iar _distanta intre ele este de valoare egala(1)_. 
 
 #### Problema este simpla!
-> Sa se gaseasca cel mai scurt drum din coltul _STANGA SUS_ pana la coltul din _DREAPTA JOS_ traversand labirintul nu avem voie sa folosim elementele de tip _wall_. 
+> Sa se gaseasca cel mai scurt drum din coltul _STANGA SUS_ pana la coltul din _DREAPTA JOS_ al matricei. Traversand labirintul nu avem voie sa folosim elementele de tip _wall_. 
 
 Am rezolvat-o deci si vizualizat-o folosind Dijkstra si un alt algoritm mai elegant si optim ca acesta (A*). Alegerea algoritmului este a utilizatorului inainte de a genera matricea.
 
