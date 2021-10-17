@@ -3,16 +3,15 @@ import Node from "./Node"
 import "./Pathfind.css"
 import Astar from '../algorithms/astar'
 
-const cols = 30;
-const rows = 10;
+var cols;
+var rows = 12;
 
-const NODE_START_ROW = 0
-const NODE_START_COL = 0
-const NODE_END_ROW = rows-1
-const NODE_END_COL = cols-1
-
-
-const Pathfind = () => {
+const Pathfind = (size) => {
+    cols = size.cols
+    const NODE_START_ROW = 0
+    const NODE_START_COL = 0
+    const NODE_END_ROW = rows-1
+    const NODE_END_COL = cols-1
     const [Grid, setGrid] = useState([]);
     const [Path, setPath] = useState([]);
     const [VisitedNodes, setVisitedNodes] = useState([])
@@ -99,26 +98,27 @@ const Pathfind = () => {
 
     }
 
+    // Shortest path visualization
     const visualizeShortestPath = (shortestPathNodes) => {
         for (let i=0; i<shortestPathNodes.length; i++){
             setTimeout(()=>{
                 const node = shortestPathNodes[i];
                 document.getElementById(`node-${node.x}-${node.y}`).className = "node node-shortest-path"
-            }, 10*i)
+            }, 20*i)
         }
     }
 
+    // Visualization
     const visualizePath = () => {
         for (let i=0; i<= VisitedNodes.length; i++){
             if (i === VisitedNodes.length){
                 setTimeout(()=>{
                     visualizeShortestPath(Path);
-                }, 20*i);
+                }, 40*i);
             } else {
                 setTimeout(()=>{
                     const node = VisitedNodes[i];
                     let s = `node-${node.x}-${node.y}`
-                    console.log(document.getElementById(s))
                     document.getElementById(s).className = "node node-visited"
                 }, 20*i);
             }
@@ -131,7 +131,6 @@ const Pathfind = () => {
 
     return (
         <div className="Wrapper">
-            <h1 className="title">Vizualizator A*</h1>
             <button onClick={visualizePath} className="button-3">Vizualizeaza</button>
             <button onClick={repeat} className="button-2">Reload</button>
             <div className="grid">

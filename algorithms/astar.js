@@ -27,6 +27,9 @@ function Astar(startNode, endNode){
 
         openSet = openSet.filter(elt => elt !== current);
         closedSet.push(current)
+        
+        console.log(openSet)
+        console.log(closedSet)
 
         var neighbours = current.neighbours;
         for (let i=0; i<neighbours.length; i++){
@@ -59,7 +62,7 @@ function Astar(startNode, endNode){
 }
 
 function heuristic(a, b){
-    let d = Math.abs(a.y-a.x) + Math.abs(b.y - b.x)
+    let d = Math.abs(a.x-b.x) + Math.abs(a.y - b.y)
     return d
 }
 
