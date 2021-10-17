@@ -1,4 +1,5 @@
-function Astar(startNode, endNode){
+function Astar(startNode, endNode, choice){
+    console.log(choice)
     let openSet = []
     let closedSet = []
     let path = []
@@ -27,9 +28,6 @@ function Astar(startNode, endNode){
 
         openSet = openSet.filter(elt => elt !== current);
         closedSet.push(current)
-        
-        console.log(openSet)
-        console.log(closedSet)
 
         var neighbours = current.neighbours;
         for (let i=0; i<neighbours.length; i++){
@@ -44,13 +42,17 @@ function Astar(startNode, endNode){
                     } 
                 } else {
                     neighbour.g = tempG;
-                    newPath = true;
+                    newPath = true; 
                     openSet.push(neighbour);
                 }
                 
                 if (newPath){
-                    neighbour.f = heuristic(neighbour, endNode);
-                    neighbour.h = neighbour.f + neighbour.g;
+                    if (choice == 0){
+                        neighbour.h = heuristic(neighbour, endNode);
+                    } else {
+                        neighbour.h = 0
+                    }
+                    neighbour.f = neighbour.h + neighbour.g;
                     neighbour.prev = current;
                 }
 

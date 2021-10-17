@@ -5,9 +5,11 @@ import Astar from '../algorithms/astar'
 
 var cols;
 var rows = 12;
+var choice;
 
 const Pathfind = (size) => {
     cols = size.cols
+    choice = size.choice
     const NODE_START_ROW = 0
     const NODE_START_COL = 0
     const NODE_END_ROW = rows-1
@@ -45,7 +47,10 @@ const Pathfind = (size) => {
             endNode.neighbours[i].isWall = false
         }
         
-        let path = Astar(startNode,endNode)
+        let path = Astar(startNode,endNode,choice)
+        if (path.error === "No path found!"){
+            window.location.reload()        
+        }
         setPath(path.path);
         setVisitedNodes(path.visitedNodes)
     };
@@ -125,14 +130,15 @@ const Pathfind = (size) => {
         }    
     }
 
-    function repeat(){
+          
+    const repeat = () => {
         window.location.reload()
-    }
-
+      }
+    
     return (
         <div className="Wrapper">
             <button onClick={visualizePath} className="button-3">Vizualizeaza</button>
-            <button onClick={repeat} className="button-2">Reload</button>
+            <button onClick={repeat} style={{margin:5}} className="button-2">Refresh</button>
             <div className="grid">
                 {Grid.map((row, rowIndex) => {
                     return (
