@@ -1,3 +1,8 @@
+# Atestatul este live!
+
+[Hostat cu Google Firebase apasand aici veti putea folosii aplicatia](https://atestat-3921a.web.app/)
+
+
 # Atestat Informatica
 
 Cu totii stim despre faimosul algoritm _Dijkstra_ care gaseste cea mai scurta distanta dintre doua puncte ale unui graf prin folosirea unei structuri de date abstracte si anume [,,Cozii de prioritati''](https://en.wikipedia.org/wiki/Priority_queue). Un videoclip care explica foarte bine acest algoritm este cel de la Computerphile, linkul este [aici](https://www.youtube.com/watch?v=GazC3A4OQTE). Ei bine acest proiect reuseste sa ilustreze intr-un mod interactiv _gasirea celui mai scurt drum intre 2 puncte ale unui grafic_ cu mentionaria faptului ca graficul nostru este o matrice de _12 linii cu coloane generate dinamic de utilizator (intre 5 si 30)_ fiind prezente si noduri la care nu avem access sub forma unor _ziduri_. _Nodurile sunt elemente ale matricii_, iar _distanta intre ele este de valoare egala(1)_. 
