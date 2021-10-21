@@ -1,6 +1,8 @@
 # Atestatul este live!
 
 [Hostat cu Google Firebase apasand aici veti putea folosii aplicatia](https://atestat-3921a.web.app/)
+https://atestat-3921a.web.app/ --> link
+
 
 
 # Atestat Informatica
