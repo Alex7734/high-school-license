@@ -50,7 +50,14 @@ neighbour.f = neighbour.h + neighbour.g;
 ```
 Functia _G este incrementata cu 1 la fiecare departare in adancime_ a algoritmului de la nodul de start spre nodul final
 ***
-### Demonstratie a aplicatiei
+
+# Studiu de caz, folosind orasele din romania!
+### V-om compara Dijkstra cu A* folosind aceasta harta de mai jos, costurile drumurilor sunt predefinite
+![Romania](https://i.imgur.com/shfmL8O.jpg)
+
+
+
+# Demonstratie a aplicatiei
 ![Demo](https://user-images.githubusercontent.com/63779353/137626930-840d7a8b-1068-46c9-860e-2fb1b81a609b.gif)
 
 
