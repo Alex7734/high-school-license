@@ -130,7 +130,7 @@ for (let i=0; i<neighbours.length; i++){
 }
 
 ```
-Dupa executarea acestui for v-om merge din nou in programul principal care nu se va oprii cat timp exista inca noduri candidate sau am gasit un drum la nodul final. Se va executa o cautare a nodului cu cea mai mica valoare f astfel:
+Dupa executarea acestui for vom merge din nou in programul principal care nu se va oprii cat timp exista inca noduri candidate sau am gasit un drum la nodul final. Se va executa o cautare a nodului cu cea mai mica valoare f astfel:
 ```JavaScript
 let leastIndex = 0;
 for (let i=0; i<openSet.length; i++){
@@ -143,7 +143,7 @@ for (let i=0; i<openSet.length; i++){
 ***
 
 # Studiu de caz, folosind orasele din romania! (COMING SOON!)
-### V-om compara Dijkstra cu A* folosind aceasta harta de mai jos, costurile drumurilor sunt predefinite
+### Vom compara Dijkstra cu A* folosind aceasta harta de mai jos, costurile drumurilor sunt predefinite
 ![Romania](https://i.imgur.com/shfmL8O.jpg)
 
 
