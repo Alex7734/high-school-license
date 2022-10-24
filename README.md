@@ -142,11 +142,6 @@ for (let i=0; i<openSet.length; i++){
 
 ***
 
-# Studiu de caz, folosind orasele din romania! (COMING SOON!)
-### Vom compara Dijkstra cu A* folosind aceasta harta de mai jos, costurile drumurilor sunt predefinite
-![Romania](https://i.imgur.com/shfmL8O.jpg)
-
-
 
 # Demonstratie a aplicatiei
 ![Demo](https://user-images.githubusercontent.com/63779353/137626930-840d7a8b-1068-46c9-860e-2fb1b81a609b.gif)
